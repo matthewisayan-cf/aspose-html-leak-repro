@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Sample Statement</title>
+<style>
+  body { font-family: Arial, Helvetica, sans-serif; font-size: 11px; color: #1a1a1a; margin: 24px; }
+  h1 { font-size: 20px; color: #0b3d91; border-bottom: 3px solid #0b3d91; padding-bottom: 6px; }
+  h2 { font-size: 14px; color: #444; margin-top: 18px; }
+  .band { background: #0b3d91; color: #ffffff; padding: 6px 10px; font-weight: bold; }
+  .grid { display: table; width: 100%; }
+  .row { display: table-row; }
+  .cell { display: table-cell; padding: 4px 8px; border: 1px solid #cccccc; }
+  .label { color: #666; font-size: 10px; }
+  .value { color: #000; font-weight: bold; }
+  table { width: 100%; border-collapse: collapse; margin-top: 8px; }
+  th { background: #e8eef9; color: #0b3d91; text-align: left; padding: 6px; border: 1px solid #b9c7e2; }
+  td { padding: 5px 6px; border: 1px solid #d8d8d8; }
+  tr:nth-child(even) td { background: #f5f7fb; }
+  .pos { color: #1b7a3d; }
+  .neg { color: #b22222; }
+  .footer { margin-top: 16px; font-size: 9px; color: #888; border-top: 1px solid #ddd; padding-top: 6px; }
+  .pagebreak { page-break-before: always; }
+</style>
+</head>
+<body>
+<h1>Sample Account Statement</h1>
+<div class="grid">
+  <div class="row">
+    <div class="cell"><div class="label">Account</div><div class="value">000-1234-5678</div></div>
+    <div class="cell"><div class="label">Period</div><div class="value">January 1 &ndash; March 31</div></div>
+    <div class="cell"><div class="label">Currency</div><div class="value">USD</div></div>
+  </div>
+</div>
+
+<h2>Summary</h2>
+<table>
+  <thead><tr><th>Category</th><th>Opening</th><th>Credits</th><th>Debits</th><th>Closing</th></tr></thead>
+  <tbody>
+    <tr><td>Operating</td><td>$12,400.00</td><td class="pos">$8,210.55</td><td class="neg">$6,905.10</td><td>$13,705.45</td></tr>
+    <tr><td>Reserve</td><td>$45,000.00</td><td class="pos">$1,200.00</td><td class="neg">$0.00</td><td>$46,200.00</td></tr>
+    <tr><td>Escrow</td><td>$3,318.20</td><td class="pos">$553.04</td><td class="neg">$553.04</td><td>$3,318.20</td></tr>
+    <tr><td>Fees</td><td>$0.00</td><td class="pos">$0.00</td><td class="neg">$129.95</td><td>-$129.95</td></tr>
+  </tbody>
+</table>
+
+<h2>Transactions</h2>
+<table>
+  <thead><tr><th>Date</th><th>Description</th><th>Reference</th><th>Amount</th><th>Balance</th></tr></thead>
+  <tbody>
+    <tr><td>01/03</td><td>Opening balance</td><td>&mdash;</td><td>&mdash;</td><td>$12,400.00</td></tr>
+    <tr><td>01/05</td><td>Deposit &mdash; payroll</td><td>DEP-10231</td><td class="pos">$3,100.00</td><td>$15,500.00</td></tr>
+    <tr><td>01/09</td><td>Vendor payment &mdash; supplies</td><td>ACH-44109</td><td class="neg">$842.17</td><td>$14,657.83</td></tr>
+    <tr><td>01/14</td><td>Card settlement</td><td>POS-77310</td><td class="neg">$215.40</td><td>$14,442.43</td></tr>
+    <tr><td>01/22</td><td>Transfer in</td><td>TRF-88120</td><td class="pos">$2,000.00</td><td>$16,442.43</td></tr>
+    <tr><td>02/01</td><td>Service charge</td><td>FEE-00045</td><td class="neg">$29.95</td><td>$16,412.48</td></tr>
+    <tr><td>02/08</td><td>Deposit &mdash; refund</td><td>DEP-10410</td><td class="pos">$110.55</td><td>$16,523.03</td></tr>
+    <tr><td>02/19</td><td>Vendor payment &mdash; rent</td><td>ACH-44980</td><td class="neg">$4,500.00</td><td>$12,023.03</td></tr>
+    <tr><td>03/02</td><td>Deposit &mdash; payroll</td><td>DEP-10688</td><td class="pos">$3,100.00</td><td>$15,123.03</td></tr>
+    <tr><td>03/15</td><td>Utilities</td><td>ACH-45220</td><td class="neg">$318.41</td><td>$14,804.62</td></tr>
+  </tbody>
+</table>
+
+<div class="pagebreak"></div>
+<div class="band">Detailed Notes</div>
+<p>This is a synthetic document used solely to reproduce a rendering-engine issue. It contains styled tables,
+borders, alternating row colors, and multiple text colors to exercise the layout and color subsystems. The content
+below is filler paragraphs repeated to produce a multi-page document representative of a real-world form.</p>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore
+magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+<p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra, est eros
+bibendum elit, nec luctus magna felis sollicitudin mauris.</p>
+<table>
+  <thead><tr><th>#</th><th>Item</th><th>Qty</th><th>Unit</th><th>Total</th></tr></thead>
+  <tbody>
+    <tr><td>1</td><td>Line item alpha</td><td>3</td><td>$12.00</td><td>$36.00</td></tr>
+    <tr><td>2</td><td>Line item bravo</td><td>1</td><td>$240.00</td><td>$240.00</td></tr>
+    <tr><td>3</td><td>Line item charlie</td><td>7</td><td>$5.25</td><td>$36.75</td></tr>
+    <tr><td>4</td><td>Line item delta</td><td>2</td><td>$99.99</td><td>$199.98</td></tr>
+    <tr><td>5</td><td>Line item echo</td><td>10</td><td>$1.10</td><td>$11.00</td></tr>
+  </tbody>
+</table>
+
+<div class="pagebreak"></div>
+<div class="band">Terms and Conditions</div>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante
+dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris.</p>
+<p>Fusce nec tellus sed augue semper porta. Mauris massa. Vestibulum lacinia arcu eget nulla. Class aptent taciti
+sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur sodales ligula in libero.</p>
+<p>Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh. Aenean quam. In scelerisque sem at dolor.
+Maecenas mattis. Sed convallis tristique sem. Proin ut ligula vel nunc egestas porttitor.</p>
+<p>Morbi lectus risus, iaculis vel, suscipit quis, luctus non, massa. Fusce ac turpis quis ligula lacinia aliquet.
+Mauris ipsum. Nulla metus metus, ullamcorper vel, tincidunt sed, euismod in, nibh.</p>
+<div class="footer">Synthetic statement &bull; generated for Aspose.HTML rendering reproduction &bull; page footer text</div>
+</body>
+</html>

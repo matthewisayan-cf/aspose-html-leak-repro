@@ -1,0 +1,29 @@
+plugins {
+    id 'application'
+}
+
+repositories {
+    mavenCentral()
+    // Aspose's public Java repository, so this repro resolves without any private credentials.
+    maven { url = 'https://releases.aspose.com/java/repo/' }
+}
+
+dependencies {
+    // Aspose.HTML for Java. Change the version here to test a different release.
+    implementation 'com.aspose:aspose-html:26.5:jdk17'
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
+
+application {
+    mainClass = 'com.example.aspose.HtmlToPdfLeakRepro'
+    // Bounded heap so the leak surfaces as a steadily-rising post-GC live heap (and eventually OutOfMemoryError).
+    // Raise -Xmx if you want to run more conversions before OOM.
+    applicationDefaultJvmArgs = ['-Xms256m', '-Xmx2g']
+}
+
+// Usage: ./gradlew run --args="<conversions> <sampleEvery> <warmup>"   (defaults: 2000 100 30)

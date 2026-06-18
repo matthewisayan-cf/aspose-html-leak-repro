@@ -1,0 +1,16 @@
+# Aspose license — must NOT be committed. Place your own Aspose.Total.lic (or Aspose.HTML.lic) at the repo root.
+Aspose.Total.lic
+Aspose.HTML.lic
+*.lic
+
+# Build output
+.gradle/
+build/
+
+# IDE
+.idea/
+*.iml
+.vscode/
+
+# OS
+.DS_Store
